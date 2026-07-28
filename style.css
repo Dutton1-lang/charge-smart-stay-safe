@@ -1,1 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+}
 
+.topbar {
+    background: #d71920;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav {
+    background: #002b5c;
+    color: white;
+    padding: 15px;
+}
+
+.hero {
+    background: #003f7d;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.intro {
+    padding: 40px 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 250px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cta {
+    background: #d71920;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer {
+    background: #002b5c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
