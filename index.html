@@ -68,10 +68,6 @@
       align-items: center;
       gap: 12px;
     }
-    .brand-logo-svg {
-      width: 42px;
-      height: 48px;
-    }
     .brand-text h1 {
       font-size: 20px;
       font-weight: bold;
@@ -151,18 +147,49 @@
       padding: 0 15px;
     }
 
-    /* Exact Banner Graphic Container */
-    .banner-container {
-      width: 100%;
-      margin-bottom: 30px;
+    /* Banner */
+    .banner {
+      background: linear-gradient(135deg, #111, #222);
+      color: #fff;
       border-radius: 4px;
-      overflow: hidden;
+      padding: 25px 20px;
+      text-align: center;
+      margin-bottom: 30px;
+      border: 3px solid #111;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
-    .banner-container img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .banner-content {
+      border: 2px solid #fff;
+      padding: 15px;
+      display: inline-block;
+      border-radius: 4px;
+      background: rgba(0,0,0,0.4);
+    }
+    .banner h2 {
+      font-size: 32px;
+      letter-spacing: 2px;
+      color: #fff;
+      font-weight: 900;
+    }
+    .banner-pills {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .pill {
+      background-color: #d9232a;
+      padding: 4px 12px;
+      border-radius: 12px;
+      text-transform: uppercase;
+    }
+    .hashtag {
+      margin-top: 10px;
+      color: #aaa;
+      font-size: 13px;
+      font-weight: bold;
     }
 
     /* Hero Info Section */
@@ -190,14 +217,12 @@
       margin-top: 15px;
       display: flex;
       align-items: flex-start;
-      gap: 12px;
+      gap: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
-    .alert-box img {
-      width: 24px;
-      height: auto;
-      flex-shrink: 0;
-      margin-top: 2px;
+    .alert-box i {
+      color: #d9232a;
+      font-size: 20px;
     }
     .stat-card {
       background-color: #fff;
@@ -301,7 +326,6 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       display: flex;
       flex-direction: column;
-      position: relative;
     }
     .card-header {
       padding: 12px 15px;
@@ -348,17 +372,15 @@
     .btn-red { background-color: #c62828; }
     .btn-orange { background-color: #ef6c00; }
 
-    /* Middle Row Grid Details */
+    /* Middle Row Grid */
     .fire-steps-list {
       list-style: none;
-      position: relative;
-      z-index: 2;
     }
     .fire-steps-list li {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       font-size: 13px;
       font-weight: bold;
     }
@@ -373,50 +395,6 @@
       justify-content: center;
       font-size: 12px;
       flex-shrink: 0;
-    }
-
-    /* Card Image Styling */
-    .card-img-container {
-      width: 100%;
-      height: 120px;
-      border-radius: 4px;
-      overflow: hidden;
-      margin-bottom: 10px;
-    }
-    .card-img-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Recycling Sub-Icons Row */
-    .recycle-sub-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 5px;
-      text-align: center;
-      margin-top: 15px;
-    }
-    .recycle-sub-item {
-      font-size: 10px;
-      font-weight: bold;
-      color: #2e7d32;
-    }
-    .recycle-sub-item i {
-      font-size: 18px;
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    /* Watermark Graphic for Dangerous Product */
-    .warning-watermark-svg {
-      position: absolute;
-      bottom: -10px;
-      right: -10px;
-      width: 110px;
-      height: 110px;
-      opacity: 0.08;
-      pointer-events: none;
     }
 
     /* 8 Principles Section */
@@ -621,16 +599,11 @@
     </div>
   </div>
 
-  <!-- Header with Vector Cheshire Crest -->
+  <!-- Header -->
   <header class="header">
     <div class="header-inner">
       <div class="brand">
-        <svg class="brand-logo-svg" viewBox="0 0 100 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 0L0 20V55C0 85 50 115 50 115C50 115 100 85 100 55V20L50 0Z" fill="#d9232a"/>
-          <path d="M50 8L10 24V52C10 76 50 102 50 102C50 102 90 76 90 52V24L50 8Z" fill="#0b1d3a"/>
-          <circle cx="50" cy="52" r="22" fill="#d9232a"/>
-          <path d="M50 35L54 46H65L56 53L60 64L50 57L40 64L44 53L35 46H46L50 35Z" fill="#ffd700"/>
-        </svg>
+        <i class="fa-solid fa-shield-halved" style="font-size: 38px; color: #d9232a;"></i>
         <div class="brand-text">
           <h1>Cheshire</h1>
           <span>Fire & Rescue Service</span>
@@ -663,9 +636,17 @@
 
   <div class="container">
 
-    <!-- Campaign Banner Graphic -->
-    <div class="banner-container">
-      <img src="banner.png" alt="Charge Smart Stay Safe - Safe Use, Safe Charge, Safe Disposal">
+    <!-- Campaign Banner -->
+    <div class="banner">
+      <div class="banner-content">
+        <h2>CHARGE SMART<br>STAY SAFE</h2>
+        <div class="banner-pills">
+          <span class="pill">SAFE USE</span> • 
+          <span class="pill">SAFE CHARGE</span> • 
+          <span class="pill">SAFE DISPOSAL</span>
+        </div>
+      </div>
+      <div class="hashtag">#CHARGESMARTSTAYSAFE</div>
     </div>
 
     <!-- Hero Info -->
@@ -676,7 +657,7 @@
         <p>They are safe when used correctly, but if damaged, incorrectly charged or poor quality they can fail without warning.</p>
         <p>A lithium battery fire develops rapidly, burns at extremely high temperatures and produces toxic smoke.</p>
         <div class="alert-box">
-          <img src="flame-icon.png" alt="Flame Icon">
+          <i class="fa-solid fa-fire-flame-curved"></i>
           <div><strong>Most fires involving lithium batteries occur while the battery is charging.</strong></div>
         </div>
       </div>
@@ -760,45 +741,34 @@
 
     <!-- Middle Info Section -->
     <div class="grid-3">
-      <!-- E-Bike Photo Card -->
+      <!-- Safety Advice Card -->
       <div class="card-box" style="padding: 15px;">
-        <h4 style="color: #0b1d3a; font-size: 15px; margin-bottom: 10px;">E-BIKE & E-SCOOTER SAFETY</h4>
-        <div class="card-img-container">
-          <img src="ebike-battery.jpg" alt="E-bike Battery Internal Cells">
+        <h4 style="color: #0b1d3a; font-size: 16px; margin-bottom: 10px;">E-BIKE & E-SCOOTER SAFETY</h4>
+        <div style="display: flex; gap: 10px;">
+          <div style="background: #eee; width: 40%; height: 120px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #888;">
+            <i class="fa-solid fa-bicycle" style="font-size: 40px;"></i>
+          </div>
+          <ul style="font-size: 11px; list-style: none; width: 60%;">
+            <li style="margin-bottom: 4px;">✓ Buy from reputable retailers</li>
+            <li style="margin-bottom: 4px;">✓ Look for UKCA or CE marking</li>
+            <li style="margin-bottom: 4px;">✓ Use correct charger</li>
+            <li style="margin-bottom: 4px;">✓ Never charge unattended</li>
+            <li style="margin-bottom: 4px;">✓ Keep away from combustible materials</li>
+          </ul>
         </div>
-        <ul style="font-size: 11px; list-style: none;">
-          <li style="margin-bottom: 3px;">✓ Buy from reputable retailers</li>
-          <li style="margin-bottom: 3px;">✓ Look for UKCA or CE marking</li>
-          <li style="margin-bottom: 3px;">✓ Use correct charger</li>
-          <li style="margin-bottom: 3px;">✓ Never charge unattended</li>
-          <li style="margin-bottom: 3px;">✓ Keep away from combustible materials</li>
-        </ul>
         <a href="#" class="card-footer-btn" style="background-color: #0b1d3a; margin-top: 15px; border-radius: 4px;">Read more advice</a>
       </div>
 
-      <!-- Dispose Safely Card -->
+      <!-- Dispose Safely -->
       <div class="card-box" style="padding: 15px;">
-        <h4 style="color: #2e7d32; font-size: 15px; margin-bottom: 8px;"><i class="fa-solid fa-recycle"></i> DISPOSE SAFELY</h4>
-        <p style="font-size: 11px; color: #444;">Lithium batteries should never be placed in household waste or recycling bins. Take them to a safe recycling point.</p>
-        
-        <div class="recycle-sub-grid">
-          <div class="recycle-sub-item"><i class="fa-solid fa-dumpster"></i>Household Recycling</div>
-          <div class="recycle-sub-item"><i class="fa-solid fa-basket-shopping"></i>Supermarket Points</div>
-          <div class="recycle-sub-item"><i class="fa-solid fa-store"></i>Retail Schemes</div>
-        </div>
-
-        <div style="text-align: right; margin-top: 10px;">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=70x70&data=https://www.cheshirefire.gov.uk" alt="QR Code" style="width: 55px; height: 55px;">
-        </div>
-
-        <a href="#" class="card-footer-btn btn-green" style="border-radius: 4px; margin-top: 10px;">Find your nearest recycling point</a>
+        <h4 style="color: #2e7d32; font-size: 16px; margin-bottom: 10px;"><i class="fa-solid fa-recycle"></i> DISPOSE SAFELY</h4>
+        <p style="font-size: 12px; margin-bottom: 10px;">Lithium batteries should never be placed in household waste or recycling bins. Take them to a safe recycling point.</p>
+        <a href="#" class="card-footer-btn btn-green" style="border-radius: 4px;">Find your nearest recycling point</a>
       </div>
 
-      <!-- Emergency Fire Card with Flame Image Overlay -->
-      <div class="card-box" style="padding: 15px; border-right: 4px solid #d9232a; position: relative; overflow: hidden;">
-        <img src="flame.png" alt="Flame Graphic" style="position: absolute; right: -10px; bottom: 0; height: 180px; width: auto; opacity: 0.95; pointer-events: none; z-index: 1;">
-
-        <h4 style="color: #d9232a; font-size: 15px; margin-bottom: 12px; position: relative; z-index: 2;">IF A BATTERY CATCHES FIRE</h4>
+      <!-- Emergency Fire Card -->
+      <div class="card-box" style="padding: 15px; border-right: 4px solid #d9232a;">
+        <h4 style="color: #d9232a; font-size: 16px; margin-bottom: 10px;">IF A BATTERY CATCHES FIRE</h4>
         <ul class="fire-steps-list">
           <li><span class="num-circle">1</span> Get everyone out</li>
           <li><span class="num-circle">2</span> Close doors behind you</li>
@@ -806,7 +776,7 @@
           <li><span class="num-circle">4</span> Do not attempt to tackle the fire</li>
           <li><span class="num-circle">5</span> Warn others to stay away</li>
         </ul>
-        <a href="#" class="card-footer-btn btn-red" style="margin-top: 15px; border-radius: 4px; position: relative; z-index: 2;">Fire safety in the home</a>
+        <a href="#" class="card-footer-btn btn-red" style="margin-top: 15px; border-radius: 4px;">Fire safety in the home</a>
       </div>
     </div>
 
@@ -931,11 +901,6 @@
 
       <!-- Report Dangerous Product -->
       <div class="card-box" style="padding: 15px; background-color: #fafafa;">
-        <svg class="warning-watermark-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 5L95 90H5L50 5Z" stroke="#333" stroke-width="8"/>
-          <path d="M50 35V60M50 72V76" stroke="#333" stroke-width="8" stroke-linecap="round"/>
-        </svg>
-
         <h4 style="color: #0b1d3a; font-size: 15px; margin-bottom: 10px;">REPORT A DANGEROUS PRODUCT</h4>
         <p style="font-size: 12px; margin-bottom: 15px; color: #666;">If you believe a battery, charger or device is unsafe, report it to help keep others safe.</p>
         <div class="list-item"><i class="fa-solid fa-user-shield icon-navy"></i><span style="font-size: 12px; font-weight: bold;">Report to Trading Standards</span></div>
@@ -952,12 +917,7 @@
     <div class="footer-inner">
       <div class="footer-col">
         <div class="brand" style="margin-bottom: 15px;">
-          <svg class="brand-logo-svg" viewBox="0 0 100 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 0L0 20V55C0 85 50 115 50 115C50 115 100 85 100 55V20L50 0Z" fill="#d9232a"/>
-            <path d="M50 8L10 24V52C10 76 50 102 50 102C50 102 90 76 90 52V24L50 8Z" fill="#0b1d3a"/>
-            <circle cx="50" cy="52" r="22" fill="#d9232a"/>
-            <path d="M50 35L54 46H65L56 53L60 64L50 57L40 64L44 53L35 46H46L50 35Z" fill="#ffd700"/>
-          </svg>
+          <i class="fa-solid fa-shield-halved" style="font-size: 38px; color: #d9232a;"></i>
           <div class="brand-text">
             <h1>Cheshire</h1>
             <span>Fire & Rescue Service</span>
@@ -1018,7 +978,7 @@
     </div>
   </footer>
 
-  <!-- JavaScript for Interactive Accordions -->
+  <!-- JavaScript to Handle Interactive Accordions -->
   <script>
     document.querySelectorAll('.faq-header').forEach(header => {
       header.addEventListener('click', () => {
