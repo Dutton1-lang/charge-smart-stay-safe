@@ -68,10 +68,6 @@
       align-items: center;
       gap: 12px;
     }
-    .brand-logo {
-      width: 45px;
-      height: auto;
-    }
     .brand-text h1 {
       font-size: 20px;
       font-weight: bold;
@@ -362,6 +358,7 @@
     .icon-green { color: #2e7d32; }
     .icon-red { color: #c62828; }
     .icon-orange { color: #ef6c00; }
+    .icon-navy { color: #0b1d3a; }
 
     .card-footer-btn {
       display: block;
@@ -471,9 +468,13 @@
       border-radius: 2px;
       font-weight: bold;
     }
+
+    /* FAQ Accordion Styles */
     .faq-item {
-      padding: 10px 0;
       border-bottom: 1px solid #eee;
+      padding: 8px 0;
+    }
+    .faq-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -482,8 +483,22 @@
       color: #333;
       cursor: pointer;
     }
-    .faq-item i {
+    .faq-header i {
       color: #888;
+      transition: transform 0.2s ease;
+    }
+    .faq-content {
+      display: none;
+      font-size: 12px;
+      color: #555;
+      padding-top: 8px;
+      line-height: 1.4;
+    }
+    .faq-item.active .faq-content {
+      display: block;
+    }
+    .faq-item.active .faq-header i {
+      transform: rotate(180deg);
     }
 
     /* Footer */
@@ -588,7 +603,6 @@
   <header class="header">
     <div class="header-inner">
       <div class="brand">
-        <!-- Shield Icon Placeholder -->
         <i class="fa-solid fa-shield-halved" style="font-size: 38px; color: #d9232a;"></i>
         <div class="brand-text">
           <h1>Cheshire</h1>
@@ -673,7 +687,7 @@
       <a href="#" class="btn-outline">Find out more about lithium batteries <i class="fa-solid fa-chevron-right"></i></a>
     </div>
 
-    <!-- 3 Column Guidance Section -->
+    <!-- 3 Column Safety Grid -->
     <div class="grid-3">
       <!-- Charge Smart -->
       <div class="card-box">
@@ -813,7 +827,7 @@
       </div>
     </div>
 
-    <!-- Bottom Resources & FAQ Grid -->
+    <!-- Bottom Resources & Dynamic FAQ Grid -->
     <div class="grid-3">
       <!-- Downloadable Resources -->
       <div class="card-box" style="padding: 15px;">
@@ -828,15 +842,61 @@
         <a href="#" style="font-size: 12px; font-weight: bold; color: #0b1d3a; display: block; margin-top: 10px;">View all resources <i class="fa-solid fa-chevron-right"></i></a>
       </div>
 
-      <!-- FAQ Section -->
+      <!-- Dynamic FAQ Section -->
       <div class="card-box" style="padding: 15px;">
         <h4 style="color: #0b1d3a; font-size: 15px; margin-bottom: 12px;">FREQUENTLY ASKED QUESTIONS</h4>
-        <div class="faq-item"><span>Can I charge my e-bike overnight?</span> <i class="fa-solid fa-chevron-down"></i></div>
-        <div class="faq-item"><span>Is it safe to use third party chargers?</span> <i class="fa-solid fa-chevron-down"></i></div>
-        <div class="faq-item"><span>What should I do with a swollen battery?</span> <i class="fa-solid fa-chevron-down"></i></div>
-        <div class="faq-item"><span>Can lithium batteries explode?</span> <i class="fa-solid fa-chevron-down"></i></div>
-        <div class="faq-item"><span>How do I recycle lithium batteries?</span> <i class="fa-solid fa-chevron-down"></i></div>
-        <a href="#" style="font-size: 12px; font-weight: bold; color: #0b1d3a; display: block; margin-top: 10px;">View all FAQs <i class="fa-solid fa-chevron-right"></i></a>
+        
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>Can I charge my e-bike overnight?</span> 
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p>No. We strongly advise against charging e-bikes or e-scooters overnight while you are asleep, as you will not be alerted immediately if a thermal failure occurs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>Is it safe to use third party chargers?</span> 
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p>Always use the manufacturer-approved charger. Third-party chargers may not have the correct voltage or safety cut-offs designed for your specific battery.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>What should I do with a swollen battery?</span> 
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p>Stop using and charging it immediately. Place it outdoors away from combustible materials if safe to do so, and contact local recycling or waste services for hazardous disposal advice.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>Can lithium batteries explode?</span> 
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p>If damaged or overcharged, lithium batteries can enter thermal runaway, rapidly building up pressure and bursting into high-temperature flames.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>How do I recycle lithium batteries?</span> 
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p>Never throw them in general waste bins. Take them to designated battery recycling banks found at supermarkets or household waste recycling centers.</p>
+          </div>
+        </div>
+
+        <a href="#" style="font-size: 12px; font-weight: bold; color: #0b1d3a; display: block; margin-top: 15px;">View all FAQs <i class="fa-solid fa-chevron-right"></i></a>
       </div>
 
       <!-- Report Dangerous Product -->
@@ -917,6 +977,16 @@
       </div>
     </div>
   </footer>
+
+  <!-- JavaScript to Handle Interactive Accordions -->
+  <script>
+    document.querySelectorAll('.faq-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
