@@ -1,9 +1,0 @@
-SAFE CHARGING CHECKLIST
-
-[ ] Correct charger
-[ ] Hard, flat surface
-[ ] Battery cool before charging
-[ ] Escape route clear
-[ ] Smoke alarm working
-[ ] Charging supervised
-[ ] Charger disconnected after use
