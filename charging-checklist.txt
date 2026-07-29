@@ -1,9 +1,1 @@
-SAFE CHARGING CHECKLIST
-
-[ ] Correct charger
-[ ] Hard, flat surface
-[ ] Battery cool before charging
-[ ] Escape route clear
-[ ] Smoke alarm working
-[ ] Charging supervised
-[ ] Charger disconnected after use
+Charging Checklist\n\nCorrect charger\nHard flat surface\nBattery cool before charging\nEscape route clear\nSmoke alarm working\nCharging supervised\nDisconnect after charging
