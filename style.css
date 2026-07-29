@@ -117,7 +117,7 @@ a { color: inherit; }
   min-height: 480px;
   background:
     linear-gradient(90deg, rgba(6,31,61,.96), rgba(6,31,61,.55)),
-    url("images/charge-smart-stay-safe.jpg") center/cover no-repeat;
+    url("charge-smart-stay-safe.jpg") center/cover no-repeat;
   color: var(--white);
   display: flex;
   align-items: center;
